@@ -2,10 +2,10 @@
     border: solid 1px black;
 } */
 
-
 body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
+
 }
 
 .nav-box {
@@ -60,16 +60,34 @@ span a:hover {
 }
 
 .dots-logo {
-    width: 24px;
-    height: 24px;
+    display: inline-block;
+    background-image: url(img/icons/dots.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-top: 10px;
 }
 
-.dots-logo:hover {
-    /*     content: ''; */
-    box-shadow: 0 0 20px rgba(190, 190, 190, 0.5);
-    filter: drop-shadow(1px 1px 3px #888);
-    /*     border-radius: 50%;
-    background-color: rgba(178, 177, 177, 0.3); */
+.dots-parent {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    display: inline-block;
+    align-items: center;
+    margin-right: 20px;
+}
+
+
+.dots-parent:hover {
+    background-color: rgba(60, 64, 67, .08);
+    border-radius: 50%;
+}
+
+.a-dots:hover {
+    text-decoration: none;
 }
 
 .button-style {
@@ -180,6 +198,25 @@ span a:hover {
     text-align: center;
 }
 
+.searcher-micro::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    margin-left: -8px;
+    border-width: 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #232b2d transparent;
+}
+
+.ddown-msg {
+    display: none;
+}
+
+.searcher-micro:hover .ddown-msg {
+    display: block;
+}
+
 .search-google,
 .feeling-lucky {
     background-color: #f8f9fa;
@@ -207,6 +244,7 @@ span a:hover {
     flex-grow: 1;
     flex-shrink: 0;
     box-sizing: border-box;
+    min-height: 225px;
 }
 
 .languages {
@@ -226,7 +264,9 @@ span a:hover {
     background: #f2f2f2;
     flex-shrink: 0;
     box-sizing: border-box;
-    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
 }
 
 .country-box {
@@ -237,12 +277,6 @@ span a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-}
-
-@media only screen and (max-width: 1200px) {
-    .more-info-footer {
-        justify-content: space-evenly;
-    }
 }
 
 .more-info-footer {
